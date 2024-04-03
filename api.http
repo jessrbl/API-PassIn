@@ -1,1 +1,1 @@
-GET http://localhost:3333/attendees/1/badge
+GET http://localhost:3333/events/7f3d5318-64c1-4cb6-82e3-745e4632ce38/attendees?query=Jéssica

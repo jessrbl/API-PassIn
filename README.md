@@ -1,12 +1,14 @@
-# pass.in
+# Pass.in
 
 O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**. 
 
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+- A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
 
-Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
+- Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
 
-O sistema fará um scan da credencial do participante para permitir a entrada no evento.
+- O sistema fará um scan da credencial do participante para permitir a entrada no evento.
+
+___ 
 
 ## Requisitos
 
@@ -19,27 +21,37 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 - [x] O participante deve poder visualizar seu crachá de inscrição;
 - [x] O participante deve poder realizar check-in no evento;
 
+___
+
 ### Regras de negócio
 
 - [x] O participante só pode se inscrever em um evento uma única vez;
 - [x] O participante só pode se inscrever em eventos com vagas disponíveis;
 - [x] O participante só pode realizar check-in em um evento uma única vez;
 
+___
+
 ### Requisitos não-funcionais
 
 - [x] O check-in no evento será realizado através de um QRCode;
 
+___
+
 ## Documentação da API (Swagger)
 
-Para documentação da API, acesse o link: https://nlw-unite-nodejs.onrender.com/docs
+![alt text](./src/assets/image.png)
+
+![alt text](./src/assets/image-1.png)
+
+![alt text](./src/assets/image-2.png)
+
+___
 
 ## Banco de dados
 
-Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
+Banco de dados relacional (SQL). 
 
-### Diagrama ERD
-
-<img src=".github/erd.svg" width="600" alt="Diagrama ERD do banco de dados" />
+___
 
 ### Estrutura do banco (SQL)
 
@@ -80,3 +92,67 @@ CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "e
 -- CreateIndex
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
+
+___
+
+### Utilização
+
+1. **Instalação de Dependências**:
+
+   Execute o seguinte comando para instalar todas as dependências listadas no arquivo `package.json`:
+
+   ```
+   npm install
+   ```
+
+2. **Configuração do Banco de Dados**:
+
+   Se estiver usando o Prisma para interagir com o banco de dados, execute as migrações do banco de dados usando o seguinte comando:
+
+   ```
+   npm run db:migrate
+   ```
+
+3. **Execução do Servidor de Desenvolvimento**:
+
+   Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
+
+   ```
+   npm run dev
+   ```
+
+   Isso iniciará o servidor usando o TypeScript e monitorará as alterações no código fonte, reiniciando o servidor conforme necessário.
+
+
+4. **Visualização do Prisma Studio (opcional)**:
+
+   Se desejar visualizar o Prisma Studio, uma interface de usuário para explorar e gerenciar os dados do banco de dados, utilize o seguinte comando:
+
+   ```
+   npm run db:studio
+   ```
+
+   Isso abrirá o Prisma Studio no seu navegador padrão.
+
+___
+
+## Status
+
+![Badge em Desenvolvimento](https://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=FF69B4&style=for-the-badge)
+
+___
+
+<h2> ✨ Author</h2>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/jessrbl">
+        <img src="https://avatars3.githubusercontent.com/jessrbl" width="100px;" alt="Foto da Jéssica F. no GitHub"/><br>
+        <sub>
+          <b>Jéssica F. Rebelo</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
