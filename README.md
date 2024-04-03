@@ -1,3 +1,5 @@
+<h6> <a href = "https://github.com/jessrbl/API-PassIn/blob/main/README-EN.md"> English version </a></h6>
+
 # Pass.in
 
 O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**. 
