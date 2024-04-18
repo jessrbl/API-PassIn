@@ -4,11 +4,11 @@ import {prisma} from '../src/lib/prisma'
 async function seed() {
     await prisma.event.create({
         data: {
-            id: '85e5626f-de38-45b6-bf53-6976045aa66b',
-            title: 'Unite Summit',
-            slug: 'unite-summit',
-            details: 'Um evento para devs apaixonados por código',
-            maximumAttendees: 120,          
+            id: '5283c8e9-43ef-4a90-935c-30a90a264e99',
+            title: 'Escola de combustão',
+            slug: 'combustão',
+            details: 'Um evento para devs apaixonados por combustão',
+            maximumAttendees: 100,          
         }
     })
 }

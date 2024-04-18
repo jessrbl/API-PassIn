@@ -1,1 +1,14 @@
 GET http://localhost:3333/events/7f3d5318-64c1-4cb6-82e3-745e4632ce38/attendees?query=Jéssica
+
+
+
+###
+
+POST http://localhost:3333/events/5283c8e9-43ef-4a90-935c-30a90a264e99/attendees
+Content-Type: application/json
+
+{
+    "name": "Isabela Fernandes",
+    "email": "isabela.fernandes@example.com",
+    "eventId": "5283c8e9-43ef-4a90-935c-30a90a264e99"
+}
